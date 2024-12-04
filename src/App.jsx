@@ -1,8 +1,10 @@
+import Navigation from "@/shared/components/navigation";
+
 const App = () => {
   return (
     <h1>
       Hello
-      <button className="btn btn--primary">Hey, I am a button</button>
+      <Navigation />
     </h1>
   );
 };
