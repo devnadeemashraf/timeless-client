@@ -1,0 +1,561 @@
+:root {
+  /* Base Colors */
+  --clr-base-primary-hue: 117; /* Brand color hue */
+  --clr-base-primary-sat: 56%; /* Brand color saturation */
+  --clr-base-primary-lit: 51%; /* Brand color lightness */
+
+  --clr-base-dark-hue: 0; /* Dark color hue */
+  --clr-base-dark-sat: 2%; /* Dark color saturation */
+  --clr-base-dark-lit: 11%; /* Dark color lightness */
+
+  --clr-base-light-hue: 0; /* Light color hue */
+  --clr-base-light-sat: 0%; /* Light color saturation */
+  --clr-base-light-lit: 87%; /* Light color lightness */
+
+  /* Brand Color */
+  --clr-brand: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    var(--clr-base-primary-lit)
+  );
+
+  /* Dark Color */
+  --clr-dark: hsl(
+    var(--clr-base-dark-hue),
+    var(--clr-base-dark-sat),
+    var(--clr-base-dark-lit)
+  );
+
+  /* Light Color */
+  --clr-light: hsl(
+    var(--clr-base-light-hue),
+    var(--clr-base-light-sat),
+    var(--clr-base-light-lit)
+  );
+
+  /* Derived Colors */
+  --clr-brand-light: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    65%
+  );
+  --clr-brand-dark: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    40%
+  );
+
+  --clr-accent-1: 160, 50%, 55%; /* Green accent */
+  --clr-accent-2: 210, 50%, 60%; /* Blue accent */
+
+  /* Gray Shades */
+  --clr-gray-light: 0, 0%, 92%; /* Light gray */
+  --clr-gray-medium: 0, 0%, 60%; /* Medium gray */
+  --clr-gray-dark: 0, 0%, 30%; /* Dark gray */
+
+  /* Background Variants */
+  --clr-bg-light: hsl(
+    var(--clr-base-light-hue),
+    var(--clr-base-light-sat),
+    98%
+  );
+  --clr-bg-dark: hsl(var(--clr-base-dark-hue), var(--clr-base-dark-sat), 10%);
+  --clr-bg-accent: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    90%
+  );
+
+  /* Text Variants */
+  --clr-text-main: hsl(var(--clr-base-dark-hue), var(--clr-base-dark-sat), 20%);
+  --clr-text-secondary: hsl(
+    var(--clr-base-dark-hue),
+    var(--clr-base-dark-sat),
+    40%
+  );
+  --clr-text-muted: hsl(
+    var(--clr-base-dark-hue),
+    var(--clr-base-dark-sat),
+    60%
+  );
+
+  /* Button Variants */
+  --clr-btn-primary-bg: var(--clr-brand);
+  --clr-btn-primary-text: var(--clr-light);
+  --clr-btn-primary-hover-bg: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    40%
+  );
+  --clr-btn-secondary-bg: var(--clr-gray-light);
+  --clr-btn-secondary-text: var(--clr-dark);
+
+  /* Spacing */
+  --spacing-xs: 0.5rem; /* Small spacing (e.g. margins, padding) */
+  --spacing-sm: 1rem; /* Small spacing */
+  --spacing-md: 1.5rem; /* Medium spacing */
+  --spacing-lg: 2rem; /* Large spacing */
+  --spacing-xl: 3rem; /* Extra large spacing */
+  --spacing-xxl: 4rem; /* Double extra large spacing */
+
+  /* Gap (for grid or flex layouts) */
+  --gap-xs: 0.5rem;
+  --gap-sm: 1rem;
+  --gap-md: 1.5rem;
+  --gap-lg: 2rem;
+  --gap-xl: 3rem;
+
+  /* Margin */
+  --margin-xs: 0.5rem;
+  --margin-sm: 1rem;
+  --margin-md: 1.5rem;
+  --margin-lg: 2rem;
+  --margin-xl: 3rem;
+
+  /* Padding */
+  --padding-xs: 0.5rem;
+  --padding-sm: 1rem;
+  --padding-md: 1.5rem;
+  --padding-lg: 2rem;
+  --padding-xl: 3rem;
+
+  /* Border Radius */
+  --border-radius-sm: 0.25rem; /* Small border radius */
+  --border-radius-md: 0.5rem; /* Medium border radius */
+  --border-radius-lg: 1rem; /* Large border radius */
+  --border-radius-circle: 50%; /* Circle (for icons, buttons) */
+
+  /* Window Breakpoints (Media Queries) */
+  --breakpoint-xs: 20rem; /* Small screens (phones) */
+  --breakpoint-sm: 48rem; /* Medium screens (tablets) */
+  --breakpoint-md: 64rem; /* Large screens (laptops/desktops) */
+  --breakpoint-lg: 80rem; /* Extra large screens */
+  --breakpoint-xl: 120rem; /* Huge screens (large monitors) */
+
+  /* Font Sizes */
+  --font-size-xs: 0.875rem; /* Extra small font size */
+  --font-size-normal: 1rem; /* Normal font size */
+  --font-size-md: 1.125rem; /* Medium font size */
+  --font-size-lg: 1.25rem; /* Large font size */
+  --font-size-xl: 1.5rem; /* Extra large font size */
+  --font-size-xxl: 2rem; /* Huge font size */
+
+  /* Line Heights */
+  --line-height-tight: 1.2; /* Tight line height */
+  --line-height-normal: 1.5; /* Normal line height */
+  --line-height-loose: 1.75; /* Loose line height */
+
+  /* Transition */
+  --transition-bg-normal-ease: background-color 0.15s ease-in; /* Background Transition*/
+  --transition-clr-normal-ease: color 0.15s ease-in; /* Color Transition*/
+}
+
+[theme="dark"] {
+  /* Base Colors */
+  --clr-base-primary-hue: 117; /* Brand color hue */
+  --clr-base-primary-sat: 56%; /* Brand color saturation */
+  --clr-base-primary-lit: 51%; /* Brand color lightness */
+
+  --clr-base-dark-hue: 0; /* Dark color hue */
+  --clr-base-dark-sat: 2%; /* Dark color saturation */
+  --clr-base-dark-lit: 11%; /* Dark color lightness */
+
+  --clr-base-light-hue: 0; /* Light color hue */
+  --clr-base-light-sat: 0%; /* Light color saturation */
+  --clr-base-light-lit: 87%; /* Light color lightness */
+
+  /* Brand Color */
+  --clr-brand: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    var(--clr-base-primary-lit)
+  );
+
+  /* Dark Color */
+  --clr-dark: hsl(
+    var(--clr-base-dark-hue),
+    var(--clr-base-dark-sat),
+    var(--clr-base-dark-lit)
+  );
+
+  /* Light Color */
+  --clr-light: hsl(
+    var(--clr-base-light-hue),
+    var(--clr-base-light-sat),
+    var(--clr-base-light-lit)
+  );
+
+  /* Derived Colors */
+  --clr-brand-light: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    65%
+  );
+  --clr-brand-dark: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    40%
+  );
+
+  --clr-accent-1: 160, 50%, 55%; /* Green accent */
+  --clr-accent-2: 210, 50%, 60%; /* Blue accent */
+
+  /* Gray Shades */
+  --clr-gray-light: 0, 0%, 92%; /* Light gray */
+  --clr-gray-medium: 0, 0%, 60%; /* Medium gray */
+  --clr-gray-dark: 0, 0%, 30%; /* Dark gray */
+
+  /* Background Variants */
+  --clr-bg-light: hsl(
+    var(--clr-base-dark-hue),
+    var(--clr-base-dark-sat),
+    12% /* Darkened background for light mode */
+  );
+  --clr-bg-dark: hsl(var(--clr-base-dark-hue), var(--clr-base-dark-sat), 10%);
+  --clr-bg-accent: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    85% /* Slightly lighter for accents in dark theme */
+  );
+
+  /* Text Variants */
+  --clr-text-main: hsl(
+    var(--clr-base-light-hue),
+    var(--clr-base-light-sat),
+    85%
+  ); /* Light text for dark mode */
+  --clr-text-secondary: hsl(
+    var(--clr-base-light-hue),
+    var(--clr-base-light-sat),
+    75%
+  ); /* Slightly darker secondary text */
+  --clr-text-muted: hsl(
+    var(--clr-base-light-hue),
+    var(--clr-base-light-sat),
+    60%
+  ); /* Even darker muted text */
+
+  /* Button Variants */
+  --clr-btn-primary-bg: var(--clr-brand);
+  --clr-btn-primary-text: var(--clr-light);
+  --clr-btn-primary-hover-bg: hsl(
+    var(--clr-base-primary-hue),
+    var(--clr-base-primary-sat),
+    40%
+  );
+  --clr-btn-secondary-bg: var(
+    --clr-gray-medium
+  ); /* Darker background for secondary buttons */
+  --clr-btn-secondary-text: var(
+    --clr-light
+  ); /* Light text for secondary buttons */
+
+  /* Spacing */
+  --spacing-xs: 0.5rem; /* Small spacing (e.g. margins, padding) */
+  --spacing-sm: 1rem; /* Small spacing */
+  --spacing-md: 1.5rem; /* Medium spacing */
+  --spacing-lg: 2rem; /* Large spacing */
+  --spacing-xl: 3rem; /* Extra large spacing */
+  --spacing-xxl: 4rem; /* Double extra large spacing */
+
+  /* Gap (for grid or flex layouts) */
+  --gap-xs: 0.5rem;
+  --gap-sm: 1rem;
+  --gap-md: 1.5rem;
+  --gap-lg: 2rem;
+  --gap-xl: 3rem;
+
+  /* Margin */
+  --margin-xs: 0.5rem;
+  --margin-sm: 1rem;
+  --margin-md: 1.5rem;
+  --margin-lg: 2rem;
+  --margin-xl: 3rem;
+
+  /* Padding */
+  --padding-xs: 0.5rem;
+  --padding-sm: 1rem;
+  --padding-md: 1.5rem;
+  --padding-lg: 2rem;
+  --padding-xl: 3rem;
+
+  /* Border Radius */
+  --border-radius-sm: 0.25rem; /* Small border radius */
+  --border-radius-md: 0.5rem; /* Medium border radius */
+  --border-radius-lg: 1rem; /* Large border radius */
+  --border-radius-circle: 50%; /* Circle (for icons, buttons) */
+
+  /* Window Breakpoints (Media Queries) */
+  --breakpoint-xs: 20rem; /* Small screens (phones) */
+  --breakpoint-sm: 48rem; /* Medium screens (tablets) */
+  --breakpoint-md: 64rem; /* Large screens (laptops/desktops) */
+  --breakpoint-lg: 80rem; /* Extra large screens */
+  --breakpoint-xl: 120rem; /* Huge screens (large monitors) */
+
+  /* Font Sizes */
+  --font-size-xs: 0.875rem; /* Extra small font size */
+  --font-size-normal: 1rem; /* Normal font size */
+  --font-size-md: 1.125rem; /* Medium font size */
+  --font-size-lg: 1.25rem; /* Large font size */
+  --font-size-xl: 1.5rem; /* Extra large font size */
+  --font-size-xxl: 2rem; /* Huge font size */
+
+  /* Line Heights */
+  --line-height-tight: 1.2; /* Tight line height */
+  --line-height-normal: 1.5; /* Normal line height */
+  --line-height-loose: 1.75; /* Loose line height */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  /*Global Color Transition*/
+  transition: var(--transition-bg-normal-ease),
+    var(--transition-clr-normal-ease);
+}
+
+/* Global reset for HTML and body */
+html,
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: var(--line-height-normal);
+  background-color: var(--clr-bg-light);
+  color: var(--clr-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: var(--font-size-normal);
+}
+
+/* Remove default link underlines and set text color */
+a {
+  text-decoration: none;
+  color: var(--clr-link, var(--clr-brand)); /* Set default link color */
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  color: var(--clr-text-main);
+}
+
+/* Reset for lists */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Table reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
+  text-align: left;
+}
+
+/* Image reset */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Form reset */
+input,
+button,
+select,
+textarea {
+  font: inherit;
+  border: 1px solid var(--clr-gray-light);
+  background: transparent;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: var(--clr-btn-primary-bg);
+  color: var(--clr-btn-primary-text);
+  border: none;
+  padding: 10px 20px;
+  font-family: inherit;
+}
+
+button:hover {
+  background: var(--clr-btn-primary-hover-bg);
+}
+
+/* Textarea and input reset */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid var(--clr-gray-light);
+  padding: 8px;
+  border-radius: var(--border-radius-md);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--clr-brand);
+  outline: none;
+}
+
+/* Backgrounds for sections */
+section,
+article,
+aside,
+footer,
+header,
+main {
+  background-color: var(--clr-bg-light);
+}
+
+/* Focus outline for accessibility */
+:focus {
+  outline: 2px solid var(--clr-brand);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-gray-dark);
+  border-radius: var(--border-radius-lg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clr-brand);
+}
+
+/* Forms */
+fieldset {
+  border: none;
+}
+
+legend {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* BEM-based styles */
+
+/* Block: .btn */
+.btn {
+  padding: 10px 20px;
+  font-family: inherit;
+  border-radius: var(--border-radius-md);
+}
+
+.btn--primary {
+  background-color: var(--clr-btn-primary-bg);
+  color: var(--clr-btn-primary-text);
+}
+
+.btn--primary:hover {
+  background-color: var(--clr-btn-primary-hover-bg);
+}
+
+.btn--secondary {
+  background-color: var(--clr-btn-secondary-bg);
+  color: var(--clr-btn-secondary-text);
+}
+
+/* Block: .input */
+.input {
+  padding: 8px;
+  border: 1px solid var(--clr-gray-light);
+  border-radius: var(--border-radius-md);
+}
+
+.input--focus:focus {
+  border-color: var(--clr-brand);
+  outline: none;
+}
+
+/* Block: .card */
+.card {
+  background-color: var(--clr-card-bg);
+  border: 1px solid var(--clr-card-border);
+  box-shadow: var(--clr-card-shadow);
+}
+
+.card__header {
+  background-color: var(--clr-card-header-bg);
+  color: var(--clr-card-header-text);
+}
+
+/* Block: .table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table__header {
+  background-color: var(--clr-table-header-bg);
+  color: var(--clr-table-header-text);
+}
+
+.table__row {
+  background-color: var(--clr-table-row-bg);
+}
+
+.table__row--alt {
+  background-color: var(--clr-table-row-alt-bg);
+}
+
+.table__row:hover {
+  background-color: var(--clr-table-row-hover-bg);
+}
+
+/* Modal */
+.modal {
+  background-color: var(--clr-modal-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__header {
+  background-color: var(--clr-modal-header-bg);
+  color: var(--clr-modal-header-text);
+}
+
+.modal__content {
+  padding: 20px;
+  background-color: var(--clr-bg-light);
+}
