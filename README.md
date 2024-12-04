@@ -38,7 +38,7 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/timeless.git
+   git clone https://github.com/devnadeemashraf/timeless-client.git
    ```
 
 2. Navigate into the project directory:
